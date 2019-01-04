@@ -1,0 +1,21 @@
+{
+  "name": "serverless-plugin-staging-example",
+  "version": "1.0.0",
+  "description": "Showcase how to use the serverles-plugin-staging options",
+  "author": "Chris Sullivan",
+  "license": "MIT",
+  "scripts": {
+    "deploy:prod": "serverless deploy -s prod",
+    "deploy:beta": "serverless deploy -s beta"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "serverless": "^1.35.0",
+    "serverless-plugin-ignitor": "file:..",
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.28.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

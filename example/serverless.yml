@@ -1,0 +1,36 @@
+service: serverless-plugin-staging-example
+
+custom: 
+  staged:
+    excludeFunctions:
+      beta:
+        - prodHandler
+    excludeResources:
+      beta:
+        - Uploads
+      
+  webpack:
+    includeModules: false
+    packager: 'yarn'
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-west-2 
+
+functions:
+  prodHandler:
+    handler: handlers.prodLambda
+  normalHandler:
+    handler: handlers.normalLambda
+
+resources: 
+  Resources:
+    Uploads:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: Uploads
+
+plugins:
+  - serverless-plugin-staging
+  - serverless-webpack
