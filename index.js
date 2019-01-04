@@ -31,8 +31,8 @@ class PluginStaging {
   options() {
     const stage = this.opts.stage || this.sls.service.provider.stage;
     const customVariable = this.sls.service.custom || {};
-    const stagedVariable = customVariable.staged || {};
-    return Object.assign({}, defaultVariable, stagedVariable, {
+    const stagingVariable = customVariable.staging || {};
+    return Object.assign({}, defaultVariable, stagingVariable, {
       stage,
     });
   }

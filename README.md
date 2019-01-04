@@ -1,5 +1,4 @@
 ![npm downloads total](https://img.shields.io/npm/dt/serverless-plugin-staging.svg) ![npm version](https://img.shields.io/npm/v/serverless-plugin-staging.svg) ![npm license](https://img.shields.io/npm/l/serverless-plugin-staging.svg)
-[![Build Status](https://travis-ci.com/JetClosing/serverless-plugin-staging.svg?branch=master)](https://travis-ci.com/JetClosing/serverless-plugin-staging)
 
 ## Installation
 

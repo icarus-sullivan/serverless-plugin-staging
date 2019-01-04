@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-staging",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Handling stage specific deployment for functions and resources",
   "main": "index.js",
   "files": [
