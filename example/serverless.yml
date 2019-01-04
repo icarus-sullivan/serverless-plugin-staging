@@ -1,7 +1,7 @@
 service: serverless-plugin-staging-example
 
 custom: 
-  staged:
+  staging:
     excludeFunctions:
       beta:
         - prodHandler

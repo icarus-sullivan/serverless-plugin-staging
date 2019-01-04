@@ -23,12 +23,12 @@ plugins:
 ```
 
 ## Configuration
-To restrict which assets are deployed within a stage, create a custom variable named `staged`. Within that staged variable, `excludeFunctions` will be used to control what functions are ignored during a deployment, and the `excludeResources` to control the resources.
+To restrict which assets are deployed within a stage, create a custom variable named `staging`. Within that staged variable, `excludeFunctions` will be used to control what functions are ignored during a deployment, and the `excludeResources` to control the resources.
 
 _Example excluding the function prodFunctionHandler from deploying on beta stage_
 ```yaml
 custom:
-  staged:
+  staging:
     excludeFunctions:
       beta: 
         - prodFunctionHandler
@@ -37,7 +37,7 @@ custom:
 _Example excluding the Uploads S3 Bucket from deploying on beta stage_
 ```yaml
 custom: 
-  staged:
+  staging:
     excludeResources:
       beta:
         - UploadsBucket
@@ -48,7 +48,7 @@ _Complete Example_
 service: serverless-plugin-staging-example
 
 custom: 
-  staged:
+  staging:
     excludeFunctions:
       beta:
         - prodFunctionHandler

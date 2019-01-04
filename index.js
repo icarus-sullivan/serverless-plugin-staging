@@ -11,7 +11,7 @@ const defaultVariable = {
 class PluginStaging {
   constructor(sls, options) {
     this.sls = sls;
-    this.options = options;
+    this.opts = options;
 
     this.commands = {
       deploy: {
@@ -29,7 +29,7 @@ class PluginStaging {
   }
 
   options() {
-    const stage = this.options.stage || this.sls.service.provider.stage;
+    const stage = this.opts.stage || this.sls.service.provider.stage;
     const customVariable = this.sls.service.custom || {};
     const stagedVariable = customVariable.staged || {};
     return Object.assign({}, defaultVariable, stagedVariable, {
