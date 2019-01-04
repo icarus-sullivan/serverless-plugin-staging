@@ -1,3 +1,4 @@
+const bPromise = require('bluebird');
 
 const defaultVariable = {
   excludeFunctions: {
@@ -23,8 +24,11 @@ class PluginStaging {
     };
 
     this.hooks = {
-      'before:deploy:resources': this.beforeDeployResources.bind(this),
-      'before:deploy:functions': this.beforeDeployFunctions.bind(this),
+      'before:deploy:resources': () => bPromise.bind(this)
+        .then(this.beforeDeployResources),
+
+      'before:deploy:functions': () => bPromise.bind(this)
+        .then(this.beforeDeployFunctions),
     };
   }
 

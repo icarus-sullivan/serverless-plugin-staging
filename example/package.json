@@ -17,5 +17,8 @@
     "serverless-webpack": "^5.2.0",
     "webpack": "^4.28.0",
     "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "serverless-plugin-staging": "../"
   }
 }
