@@ -1,4 +1,7 @@
-![npm downloads total](https://img.shields.io/npm/dt/serverless-plugin-staging.svg) ![npm version](https://img.shields.io/npm/v/serverless-plugin-staging.svg) ![npm license](https://img.shields.io/npm/l/serverless-plugin-staging.svg)
+# Serverless Staging
+![Downloads][link-download] ![Version][link-version] ![License][link-license]
+
+#### A plugin to restrict the deployment of resources or functions on a per stage basis.
 
 ## Installation
 
@@ -76,3 +79,7 @@ resources:
 plugins:
   - serverless-plugin-staging
 ```
+
+[link-download]: https://img.shields.io/npm/dt/serverless-plugin-staging.svg
+[link-version]: https://img.shields.io/npm/v/serverless-plugin-staging.svg
+[link-license]: https://img.shields.io/npm/l/serverless-plugin-staging.svg
